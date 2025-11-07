@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "marketing-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "faker>=37.3.0",
+    "kaleido>=0.2.1",
+    "langchain-core>=0.3.62",
+    "langchain-mcp-adapters>=0.1.1",
+    "langchain-openai>=0.3.18",
+    "langgraph>=0.4.7",
+    "numpy>=1.24.0",
+    "pandas>=2.2.3",
+    "plotly>=5.17.0",
+    "psycopg2-binary>=2.9.10",
+    "python-dotenv>=1.1.0",
+    "scipy>=1.10.0",
+    "sounddevice>=0.4.6",
+    "soundfile>=0.12.1",
+    "sqlalchemy>=2.0.41",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/neo"]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+]
